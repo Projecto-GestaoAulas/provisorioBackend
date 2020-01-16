@@ -22,7 +22,38 @@ public class Note extends Entity_<NoteDTO>{
 	private User userId;
 	
 	
-	
-	
+	public Note() {
+	}
 
+	public Note(List<Class> listClasses, Date dateOfNote, User userId) {
+		this.listClasses = listClasses;
+		this.dateOfNote = dateOfNote;
+		this.userId = userId;
+	}
+	
+	public List<Class> getListClasses() {
+		return listClasses;
+	}
+	public void setListClasses(List<Class> listClasses) {
+		this.listClasses = listClasses;
+	}
+	public Date getDateOfNote() {
+		return dateOfNote;
+	}
+	public void setDateOfNote(Date dateOfNote) {
+		this.dateOfNote = dateOfNote;
+	}
+	public User getUserId() {
+		return userId;
+	}
+	public void setUserId(User userId) {
+		this.userId = userId;
+	}
+
+	@Override
+	public String toString() {
+		return "Note [listClasses=" + listClasses + ", dateOfNote=" + dateOfNote + "]";
+	}
+	
+	
 }
