@@ -1,5 +1,5 @@
 package javaGestaoAulas.models;
 
-public class Academia {
+public class Academy {
 
 }
