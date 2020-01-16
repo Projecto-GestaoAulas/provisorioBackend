@@ -1,11 +1,22 @@
 package javaGestaoAulas.models;
 
-public class Academy extends Entity_ <T> {
+import javax.persistence.Entity;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+
+import javaGestaoAulas.models.entityDTOs.AcademyDTO;
+
+@Entity
+@NamedQueries({ @NamedQuery(name = Academy.GET_ALL_ACADEMIES, query = "SELECT a FROM Academy a")
+})
+
+public class Academy extends Entity_ <AcademyDTO>  {
 	
-	/**
-	 * 
-	 */
+	public static final String GET_ALL_ACADEMIES = "getAllAcademies";
+		
 	private static final long serialVersionUID = 1L;
+	
 	private String name;
 	private String type;
 	
