@@ -9,6 +9,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.OneToMany;
 
 import javaGestaoAulas.models.entityDTOs.AccountDTO;
+import javaGestaoAulas.models.Event;
 
 
 @Entity
@@ -19,6 +20,10 @@ public class Account extends Entity_<AccountDTO>  {
 	
 	private static final long serialVersionUID = 1L;
 
+
+	public static final String GET_ALL_ACCOUNTS = "getAllAccounts";
+	public static final String GET_ALL_ACCOUNT_IDs = "getAllAccountsIds";
+	public static final String GET_ACCOUNT_COUNT = "getAccountCount";
 	
 	private User user;
 	private List <Academy>  academies;
