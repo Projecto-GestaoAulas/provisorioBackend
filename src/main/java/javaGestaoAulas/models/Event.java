@@ -1,5 +1,7 @@
 package javaGestaoAulas.models;
 
-public class Event extends Entity_<Event> {
+import javaGestaoAulas.models.entityDTOs.EventDTO;
+
+public class Event extends Entity_<EventDTO> {
 
 }

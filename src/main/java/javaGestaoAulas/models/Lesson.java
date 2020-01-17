@@ -6,13 +6,13 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.NamedQueries;
 
-import javaGestaoAulas.models.entityDTOs.ClassDTO;
+import javaGestaoAulas.models.entityDTOs.LessonDTO;
 
 @Entity
 @NamedQueries ({
 	
 })
-public class Lesson extends Entity_{
+public class Lesson extends Entity_<LessonDTO>{
 	
 	private static final long serialVersionUID = 1L;
 

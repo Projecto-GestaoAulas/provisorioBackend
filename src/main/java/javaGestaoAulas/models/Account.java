@@ -27,7 +27,7 @@ public class Account extends Entity_<AccountDTO>  {
 	
 	private User user;
 	private List <Academy>  academies;
-	private List <Class> classes;
+	private List <Lesson> lessons;
 	private List <Note> notes;
 	private List <QuestionForum> questions;
 	private List <AnswerForum> answers;
@@ -35,6 +35,22 @@ public class Account extends Entity_<AccountDTO>  {
 	
 	
 	
+	public Account(User user, List<Academy> academies, List<Lesson> lessons, List<Note> notes,
+			List<QuestionForum> questions, List<AnswerForum> answers, List<Event> events) {
+		this.user = user;
+		this.academies = academies;
+		this.lessons = lessons;
+		this.notes = notes;
+		this.questions = questions;
+		this.answers = answers;
+		this.events = events;
+	}
+	
+	
+	public Account() {
+	}
+
+
 	public User getUser() {
 		return user;
 	}
@@ -47,11 +63,11 @@ public class Account extends Entity_<AccountDTO>  {
 	public void setAcademies(List<Academy> academies) {
 		this.academies = academies;
 	}
-	public List<Class> getClasses() {
-		return classes;
+	public List<Lesson> getLessons() {
+		return lessons;
 	}
-	public void setClasses(List<Class> classes) {
-		this.classes = classes;
+	public void setLessons(List<Lesson> lessons) {
+		this.lessons = lessons;
 	}
 	public List<Note> getNotes() {
 		return notes;
@@ -81,7 +97,7 @@ public class Account extends Entity_<AccountDTO>  {
 	}
 	@Override
 	public String toString() {
-		return "Account [user=" + user + ", academies=" + academies + ", classes=" + classes 
+		return "Account [user=" + user + ", academies=" + academies + ", lessons=" + lessons 
 				+ ", notes=" + notes + ", questions=" + questions +", answers=" + answers + ", events=" + events + "]";
 	}
 	

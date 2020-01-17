@@ -1,5 +1,5 @@
 package javaGestaoAulas.models.entityDTOs;
 
-public class AcademyDTO {
+public class AcademyDTO extends EntityDTO {
 
 }

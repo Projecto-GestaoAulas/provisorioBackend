@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ClassDTO extends EntityDTO {
+public class LessonDTO extends EntityDTO {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -14,11 +14,11 @@ public class ClassDTO extends EntityDTO {
 	private List <String> listCode = new ArrayList <String> ();
 	
 	
-	public ClassDTO() {
+	public LessonDTO() {
 		
 	}
 
-	public ClassDTO(List<Long> listAcademies, List<String> listUrls, List<Long> listNotes, List<String> listCode) {
+	public LessonDTO(List<Long> listAcademies, List<String> listUrls, List<Long> listNotes, List<String> listCode) {
 		this.listAcademies = listAcademies;
 		this.listUrls = listUrls;
 		this.listNotes = listNotes;

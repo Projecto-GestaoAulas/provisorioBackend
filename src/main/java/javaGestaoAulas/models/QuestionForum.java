@@ -9,10 +9,12 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.xml.registry.infomodel.User;
 
+import javaGestaoAulas.models.entityDTOs.QuestionForumDTO;
+
 @Entity
 @NamedQueries({ @NamedQuery(name = QuestionForum.GET_ALL_QF, query = "SELECT q FROM QuestionForum q"),
 		@NamedQuery(name = QuestionForum.GET_ALL_IDS, query = "SELECT q.id FROM QuestionForum q"), })
-public class QuestionForum extends Entity_ implements Serializable {
+public class QuestionForum extends Entity_ <QuestionForumDTO>  {
 
 	public static final String GET_ALL_QF = "getAllQuestionsForum";
 	public static final String GET_ALL_IDS = "getAllQuestionsIds";

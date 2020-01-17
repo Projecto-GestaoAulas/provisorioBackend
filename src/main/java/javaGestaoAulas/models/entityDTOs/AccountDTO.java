@@ -7,7 +7,7 @@ public class AccountDTO extends EntityDTO {
 	
 	private long userId;
 	private List <Long>  academiesIds = new ArrayList<Long>();
-	private List <Long>  classesIds = new ArrayList<Long>();
+	private List <Long>  lessonsIds = new ArrayList<Long>();
 	private List <Long> notesIds = new ArrayList<Long>();
 	private List <Long> questionsIds = new ArrayList<Long>();
 	private List <Long>  answersIds = new ArrayList<Long>();
@@ -17,11 +17,11 @@ public class AccountDTO extends EntityDTO {
 	public AccountDTO() {
 		}
 		
-	public AccountDTO(long userId, List<Long> academiesIds, List<Long> classesIds, List<Long> notesIds,
+	public AccountDTO(long userId, List<Long> academiesIds, List<Long> lessonsIds, List<Long> notesIds,
 			List<Long> questionsIds, List<Long> answersIds, List<Long> eventsIds) {
 		this.userId = userId;
 		this.academiesIds = academiesIds;
-		this.classesIds = classesIds;
+		this.lessonsIds = lessonsIds;
 		this.notesIds = notesIds;
 		this.questionsIds = questionsIds;
 		this.answersIds = answersIds;
@@ -41,11 +41,11 @@ public class AccountDTO extends EntityDTO {
 	public void setAcademiesIds(List<Long> academiesIds) {
 		this.academiesIds = academiesIds;
 	}
-	public List<Long> getClassesIds() {
-		return classesIds;
+	public List<Long> getLessonsIds() {
+		return lessonsIds;
 	}
-	public void setClassesIds(List<Long> classesIds) {
-		this.classesIds = classesIds;
+	public void setClassesIds(List<Long> lessonsIds) {
+		this.lessonsIds = lessonsIds;
 	}
 	public List<Long> getNotesIds() {
 		return notesIds;
@@ -76,7 +76,7 @@ public class AccountDTO extends EntityDTO {
 	
 	@Override
 	public String toString() {
-		return "AccountDTO [userId=" + userId + ", academiesIds=" + academiesIds + ", classesIds=" + classesIds 
+		return "AccountDTO [userId=" + userId + ", academiesIds=" + academiesIds + ", lessonsIds=" + lessonsIds 
 				+ ", notesIds=" + notesIds + ", questionsIds=" + questionsIds +", answersIds=" + answersIds + ", eventsIds=" + eventsIds + "]";
 	}
 	

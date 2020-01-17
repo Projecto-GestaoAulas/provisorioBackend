@@ -1,5 +1,5 @@
 package javaGestaoAulas.models.entityDTOs;
 
-public class RespostaForumDTO {
+public class EventDTO extends EntityDTO {
 
 }

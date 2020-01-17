@@ -1,5 +1,7 @@
 package javaGestaoAulas.models;
 
-public class AnswerForum {
+import javaGestaoAulas.models.entityDTOs.AnswerForumDTO;
+
+public class AnswerForum extends Entity_ <AnswerForumDTO> {
 
 }
