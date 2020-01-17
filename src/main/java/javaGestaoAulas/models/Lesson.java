@@ -12,7 +12,7 @@ import javaGestaoAulas.models.entityDTOs.ClassDTO;
 @NamedQueries ({
 	
 })
-public class Class extends Entity_<ClassDTO>{
+public class Lesson extends Entity_{
 	
 	private static final long serialVersionUID = 1L;
 
@@ -21,11 +21,11 @@ public class Class extends Entity_<ClassDTO>{
 	private List <Note> listNotes = new ArrayList <Note> ();
 	private List <String> listCode = new ArrayList <String> ();
 	
-	public Class() {
+	public Lesson() {
 		
 	}
 	
-	public Class(List<Academy> listAcademies, List<String> listUrls, List<Note> listNotes, List<String> listCode) {
+	public Lesson(List<Academy> listAcademies, List<String> listUrls, List<Note> listNotes, List<String> listCode) {
 		this.listAcademies = listAcademies;
 		this.listUrls = listUrls;
 		this.listNotes = listNotes;

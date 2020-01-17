@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javaGestaoAulas.models.Class;
+import javaGestaoAulas.models.Lesson;
 
 public class NoteDTO extends EntityDTO {
 	

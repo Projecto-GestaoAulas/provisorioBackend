@@ -13,11 +13,11 @@ import javaGestaoAulas.models.entityDTOs.NoteDTO;
 @NamedQueries ({
 	
 })
-public class Note extends Entity_<NoteDTO>{
+public class Note extends Entity_{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private List<Class> listClasses = new ArrayList <Class> ();
+	private List<Lesson> listClasses = new ArrayList <Lesson> ();
 	private Date dateOfNote;
 	private User userId;
 	
@@ -25,16 +25,16 @@ public class Note extends Entity_<NoteDTO>{
 	public Note() {
 	}
 
-	public Note(List<Class> listClasses, Date dateOfNote, User userId) {
+	public Note(List<Lesson> listClasses, Date dateOfNote, User userId) {
 		this.listClasses = listClasses;
 		this.dateOfNote = dateOfNote;
 		this.userId = userId;
 	}
 	
-	public List<Class> getListClasses() {
+	public List<Lesson> getListClasses() {
 		return listClasses;
 	}
-	public void setListClasses(List<Class> listClasses) {
+	public void setListClasses(List<Lesson> listClasses) {
 		this.listClasses = listClasses;
 	}
 	public Date getDateOfNote() {
