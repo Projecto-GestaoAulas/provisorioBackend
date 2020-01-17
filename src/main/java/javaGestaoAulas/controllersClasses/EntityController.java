@@ -47,7 +47,7 @@ public class EntityController <T extends EntityBusiness <R, E, D>, R extends Ent
 	 @GET
 	 @Produces (MediaType.APPLICATION_JSON)
 	 public List<D> consultAllEnts () {
-		 return busEnt.getAllEnts().stream().map(E :: toDTO).collect(Collectors.toList());
+		 return busEnt.getAllEnts().stream().map(entity -> converter.toDTO(entity)).collect(Collectors.toList());
 		 
 	 }
 	 

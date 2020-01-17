@@ -70,7 +70,7 @@ public class Lesson extends Entity_<LessonDTO>{
 
 	@Override
 	public String toString() {
-		return "Class [listAcademies=" + listAcademies + ", listUrls=" + listUrls + ", listNotes=" + listNotes
+		return "Class [listEditions=" + listEditions + ", listUrls=" + listUrls + ", listNotes=" + listNotes
 				+ ", listCode=" + listCode + "]";
 	} 
 	

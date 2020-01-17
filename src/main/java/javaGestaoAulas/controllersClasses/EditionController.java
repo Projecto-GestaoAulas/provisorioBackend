@@ -4,7 +4,7 @@ import javax.enterprise.context.RequestScoped;
 
 import javaGestaoAulas.businessClasses.EditionBusiness;
 import javaGestaoAulas.models.Edition;
-import javaGestaoAulas.models.converters.EditionConverter.EditionConverter;
+import javaGestaoAulas.models.converters.EditionConverter;
 import javaGestaoAulas.models.entityDTOs.EditionDTO;
 import javaGestaoAulas.repositoriesClasses.EditionRepository;
 
