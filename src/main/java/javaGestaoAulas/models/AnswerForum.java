@@ -1,6 +1,5 @@
 package javaGestaoAulas.models;
 
-public class PerguntaForum {
+public class AnswerForum {
 
-	
 }
