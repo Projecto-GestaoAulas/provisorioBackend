@@ -25,7 +25,7 @@ public class QuestionForum extends Entity_ implements Serializable {
 	private List<AnswerForum> answers;
 	private LocalDateTime createAt = LocalDateTime.now();
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
