@@ -5,15 +5,15 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 
-import javaGestaoAulas.models.entityDTOs.AcademyDTO;
+import javaGestaoAulas.models.entityDTOs.EditionDTO;
 
 @Entity
-@NamedQueries({ @NamedQuery(name = Academy.GET_ALL_ACADEMIES, query = "SELECT a FROM Academy a")
+@NamedQueries({ @NamedQuery(name = Edition.GET_ALL_EDITIONS, query = "SELECT e FROM Edition e")
 })
 
-public class Academy extends Entity_ <AcademyDTO>  {
+public class Edition extends Entity_ <EditionDTO>  {
 	
-	public static final String GET_ALL_ACADEMIES = "getAllAcademies";
+	public static final String GET_ALL_EDITIONS = "getAllEditions";
 		
 	private static final long serialVersionUID = 1L;
 	
@@ -37,7 +37,7 @@ public class Academy extends Entity_ <AcademyDTO>  {
 	
 	@Override
 	public String toString() {
-		return "Academy [name=" + name + ", type=" + type + "]";
+		return "Edition [name=" + name + ", type=" + type + "]";
 	}
 	
 	

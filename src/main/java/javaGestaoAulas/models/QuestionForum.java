@@ -1,6 +1,6 @@
 package javaGestaoAulas.models;
 
-import java.io.Serializable;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class QuestionForum extends Entity_ <QuestionForumDTO>  {
 	private List<AnswerForum> answers;
 	private LocalDateTime createAt = LocalDateTime.now();
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 

@@ -1,8 +1,10 @@
 package javaGestaoAulas.repositoriesClasses;
 
+import javax.enterprise.context.ApplicationScoped;
 import javaGestaoAulas.models.Account;
 import javaGestaoAulas.models.entityDTOs.AccountDTO;
 
+@ApplicationScoped
 public class AccountRepository extends EntityRepository <Account, AccountDTO>{
 
 	@Override

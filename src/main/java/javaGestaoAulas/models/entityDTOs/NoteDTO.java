@@ -3,14 +3,13 @@ package javaGestaoAulas.models.entityDTOs;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javaGestaoAulas.models.Note;
 
-import javaGestaoAulas.models.Lesson;
-
-public class NoteDTO extends EntityDTO {
+public class NoteDTO extends EntityDTO<Note> {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private List<Long> listClasses = new ArrayList <Long> ();
+	private List<Long> listLessons = new ArrayList <Long> ();
 	private Date dateOfNote;
 	private Long userId;
 	
@@ -19,17 +18,17 @@ public class NoteDTO extends EntityDTO {
 	}
 	
 
-	public NoteDTO(List<Long> listClasses, Date dateOfNote, Long userId) {
-		this.listClasses = listClasses;
+	public NoteDTO(List<Long> listLessons, Date dateOfNote, Long userId) {
+		this.listLessons = listLessons;
 		this.dateOfNote = dateOfNote;
 		this.userId = userId;
 	}
 
-	public List<Long> getListClasses() {
-		return listClasses;
+	public List<Long> getListLessons() {
+		return listLessons;
 	}
-	public void setListClasses(List<Long> listClasses) {
-		this.listClasses = listClasses;
+	public void setListLessons(List<Long> listLessons) {
+		this.listLessons = listLessons;
 	}
 	public Date getDateOfNote() {
 		return dateOfNote;

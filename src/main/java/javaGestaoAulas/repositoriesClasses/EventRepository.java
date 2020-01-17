@@ -1,8 +1,11 @@
 package javaGestaoAulas.repositoriesClasses;
 
+import javax.enterprise.context.ApplicationScoped;
+
 import javaGestaoAulas.models.Event;
 import javaGestaoAulas.models.entityDTOs.EventDTO;
 
+@ApplicationScoped
 public class EventRepository extends EntityRepository <Event, EventDTO>{
 
 	@Override

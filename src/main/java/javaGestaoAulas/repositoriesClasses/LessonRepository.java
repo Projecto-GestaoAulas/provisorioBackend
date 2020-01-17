@@ -1,8 +1,12 @@
 package javaGestaoAulas.repositoriesClasses;
 
+import javax.enterprise.context.ApplicationScoped;
+
 import javaGestaoAulas.models.Lesson;
 import javaGestaoAulas.models.entityDTOs.LessonDTO;
 
+
+@ApplicationScoped
 public class LessonRepository extends EntityRepository <Lesson, LessonDTO> {
 
 	@Override

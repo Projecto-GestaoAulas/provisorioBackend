@@ -1,8 +1,11 @@
 package javaGestaoAulas.repositoriesClasses;
 
+import javax.enterprise.context.ApplicationScoped;
+
 import javaGestaoAulas.models.AnswerForum;
 import javaGestaoAulas.models.entityDTOs.AnswerForumDTO;
 
+@ApplicationScoped
 public class AnswerRepository extends EntityRepository <AnswerForum, AnswerForumDTO> {
 
 	@Override

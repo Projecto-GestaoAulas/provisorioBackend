@@ -1,14 +1,17 @@
 package javaGestaoAulas.repositoriesClasses;
 
 
-import javaGestaoAulas.models.Academy;
-import javaGestaoAulas.models.entityDTOs.AcademyDTO;
+import javax.enterprise.context.ApplicationScoped;
+
+import javaGestaoAulas.models.Edition;
+import javaGestaoAulas.models.entityDTOs.EditionDTO;
 
 
-public class AcademyRepository extends EntityRepository <Academy, AcademyDTO>{
+@ApplicationScoped
+public class EditionRepository extends EntityRepository <Edition, EditionDTO>{
 
 	@Override
-	protected Class<Academy> getEntityClass() {
+	protected Class<Edition> getEntityClass() {
 		// TODO Auto-generated method stub
 		return null;
 	}

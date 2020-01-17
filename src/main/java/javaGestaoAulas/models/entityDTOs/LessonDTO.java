@@ -3,12 +3,14 @@ package javaGestaoAulas.models.entityDTOs;
 import java.util.ArrayList;
 import java.util.List;
 
+import javaGestaoAulas.models.Lesson;
 
-public class LessonDTO extends EntityDTO {
+
+public class LessonDTO extends EntityDTO<Lesson> {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private List <Long> listAcademies = new ArrayList <Long> ();
+	private List <Long> listEditions = new ArrayList <Long> ();
 	private List <String> listUrls = new ArrayList <String> ();
 	private List <Long> listNotes = new ArrayList <Long> ();
 	private List <String> listCode = new ArrayList <String> ();
@@ -18,18 +20,18 @@ public class LessonDTO extends EntityDTO {
 		
 	}
 
-	public LessonDTO(List<Long> listAcademies, List<String> listUrls, List<Long> listNotes, List<String> listCode) {
-		this.listAcademies = listAcademies;
+	public LessonDTO(List<Long> listEditions, List<String> listUrls, List<Long> listNotes, List<String> listCode) {
+		this.listEditions = listEditions;
 		this.listUrls = listUrls;
 		this.listNotes = listNotes;
 		this.listCode = listCode;
 	}
 	
-	public List<Long> getListAcademies() {
-		return listAcademies;
+	public List<Long> getListEditions() {
+		return listEditions;
 	}
-	public void setListAcademies(List<Long> listAcademies) {
-		this.listAcademies = listAcademies;
+	public void setListEditions(List<Long> listEditions) {
+		this.listEditions = listEditions;
 	}
 	public List<String> getListUrls() {
 		return listUrls;
@@ -52,7 +54,7 @@ public class LessonDTO extends EntityDTO {
 
 	@Override
 	public String toString() {
-		return "ClassDTO [listAcademies=" + listAcademies + ", listUrls=" + listUrls + ", listNotes=" + listNotes
+		return "ClassDTO [listEditions=" + listEditions + ", listUrls=" + listUrls + ", listNotes=" + listNotes
 				+ ", listCode=" + listCode + "]";
 	} 
 

@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 import javaGestaoAulas.models.entityDTOs.AccountDTO;
@@ -14,7 +15,10 @@ import javaGestaoAulas.models.Event;
 
 @Entity
 @NamedQueries({
-})
+	@NamedQuery(name = Account.GET_ALL_ACCOUNTS, query = "SELECT account FROM Account account"),
+	@NamedQuery(name = Account.GET_ALL_ACCOUNT_IDs, query = "SELECT account.id FROM Account account"),
+	@NamedQuery(name = Account.GET_ACCOUNT_COUNT, query = "SELECT COUNT(account.id) FROM Account account")})
+
 
 public class Account extends Entity_<AccountDTO>  {
 	
@@ -26,7 +30,7 @@ public class Account extends Entity_<AccountDTO>  {
 	public static final String GET_ACCOUNT_COUNT = "getAccountCount";
 	
 	private User user;
-	private List <Academy>  academies;
+	private List <Edition>  editions;
 	private List <Lesson> lessons;
 	private List <Note> notes;
 	private List <QuestionForum> questions;
@@ -35,10 +39,10 @@ public class Account extends Entity_<AccountDTO>  {
 	
 	
 	
-	public Account(User user, List<Academy> academies, List<Lesson> lessons, List<Note> notes,
+	public Account(User user, List<Edition> editions, List<Lesson> lessons, List<Note> notes,
 			List<QuestionForum> questions, List<AnswerForum> answers, List<Event> events) {
 		this.user = user;
-		this.academies = academies;
+		this.editions = editions;
 		this.lessons = lessons;
 		this.notes = notes;
 		this.questions = questions;
@@ -57,11 +61,11 @@ public class Account extends Entity_<AccountDTO>  {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public List<Academy> getAcademies() {
-		return academies;
+	public List<Edition> getEditions() {
+		return editions;
 	}
-	public void setAcademies(List<Academy> academies) {
-		this.academies = academies;
+	public void setEditions(List<Edition> editions) {
+		this.editions = editions;
 	}
 	public List<Lesson> getLessons() {
 		return lessons;
@@ -97,7 +101,7 @@ public class Account extends Entity_<AccountDTO>  {
 	}
 	@Override
 	public String toString() {
-		return "Account [user=" + user + ", academies=" + academies + ", lessons=" + lessons 
+		return "Account [user=" + user + ", editions=" + editions + ", lessons=" + lessons 
 				+ ", notes=" + notes + ", questions=" + questions +", answers=" + answers + ", events=" + events + "]";
 	}
 	

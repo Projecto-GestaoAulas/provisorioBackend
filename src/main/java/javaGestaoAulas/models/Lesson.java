@@ -5,18 +5,28 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 import javaGestaoAulas.models.entityDTOs.LessonDTO;
+import pt.upacademy.stockManagementProjectMysql.models.Product;
 
 @Entity
 @NamedQueries ({
-	
-})
+	@NamedQuery(name = Lesson.GET_ALL_LESSONS, query = "SELECT l FROM Lesson l"),
+	@NamedQuery(name = Lesson.GET_ALL_LESSONS_IDS, query = "SELECT l.id FROM Lesson l"),
+	@NamedQuery(name = Lesson.GET_LESSONS_COUNT, query = "SELECT COUNT(l.id) FROM Lesson l")})
+
+
 public class Lesson extends Entity_<LessonDTO>{
 	
+	public static final String GET_ALL_LESSONS = "getAllLessons";
+	public static final String GET_ALL_LESSONS_IDS = "getAllLessonsIds";
+	public static final String GET_LESSONS_COUNT = "getLessonsCount";
 	private static final long serialVersionUID = 1L;
+	
+	
 
-	private List <Academy> listAcademies = new ArrayList <Academy> ();
+	private List <Edition> listEditions = new ArrayList <Edition> ();
 	private List <String> listUrls = new ArrayList <String> ();
 	private List <Note> listNotes = new ArrayList <Note> ();
 	private List <String> listCode = new ArrayList <String> ();
@@ -25,19 +35,19 @@ public class Lesson extends Entity_<LessonDTO>{
 		
 	}
 	
-	public Lesson(List<Academy> listAcademies, List<String> listUrls, List<Note> listNotes, List<String> listCode) {
-		this.listAcademies = listAcademies;
+	public Lesson(List<Edition> listEditions, List<String> listUrls, List<Note> listNotes, List<String> listCode) {
+		this.listEditions = listEditions;
 		this.listUrls = listUrls;
 		this.listNotes = listNotes;
 		this.listCode = listCode;
 	}
 
 
-	public List<Academy> getListAcademies() {
-		return listAcademies;
+	public List<Edition> getListEditions() {
+		return listEditions;
 	}
-	public void setListAcademies(List<Academy> listAcademies) {
-		this.listAcademies = listAcademies;
+	public void setListEditions(List<Edition> listEditions) {
+		this.listEditions = listEditions;
 	}
 	public List<String> getListUrls() {
 		return listUrls;

@@ -3,10 +3,12 @@ package javaGestaoAulas.models.entityDTOs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountDTO extends EntityDTO {
+import javaGestaoAulas.models.Account;
+
+public class AccountDTO extends EntityDTO <Account> {
 	
 	private long userId;
-	private List <Long>  academiesIds = new ArrayList<Long>();
+	private List <Long>  editionsIds = new ArrayList<Long>();
 	private List <Long>  lessonsIds = new ArrayList<Long>();
 	private List <Long> notesIds = new ArrayList<Long>();
 	private List <Long> questionsIds = new ArrayList<Long>();
@@ -17,10 +19,10 @@ public class AccountDTO extends EntityDTO {
 	public AccountDTO() {
 		}
 		
-	public AccountDTO(long userId, List<Long> academiesIds, List<Long> lessonsIds, List<Long> notesIds,
+	public AccountDTO(long userId, List<Long> editionsIds, List<Long> lessonsIds, List<Long> notesIds,
 			List<Long> questionsIds, List<Long> answersIds, List<Long> eventsIds) {
 		this.userId = userId;
-		this.academiesIds = academiesIds;
+		this.editionsIds = editionsIds;
 		this.lessonsIds = lessonsIds;
 		this.notesIds = notesIds;
 		this.questionsIds = questionsIds;
@@ -35,11 +37,11 @@ public class AccountDTO extends EntityDTO {
 	public void setUserId(long userId) {
 		this.userId = userId;
 	}
-	public List<Long> getAcademiesIds() {
-		return academiesIds;
+	public List<Long> getEditionsIds() {
+		return editionsIds;
 	}
-	public void setAcademiesIds(List<Long> academiesIds) {
-		this.academiesIds = academiesIds;
+	public void setEditionsIds(List<Long> editionsIds) {
+		this.editionsIds = editionsIds;
 	}
 	public List<Long> getLessonsIds() {
 		return lessonsIds;
@@ -76,7 +78,7 @@ public class AccountDTO extends EntityDTO {
 	
 	@Override
 	public String toString() {
-		return "AccountDTO [userId=" + userId + ", academiesIds=" + academiesIds + ", lessonsIds=" + lessonsIds 
+		return "AccountDTO [userId=" + userId + ", editionsIds=" + editionsIds + ", lessonsIds=" + lessonsIds 
 				+ ", notesIds=" + notesIds + ", questionsIds=" + questionsIds +", answersIds=" + answersIds + ", eventsIds=" + eventsIds + "]";
 	}
 	
