@@ -15,7 +15,7 @@ import javaGestaoAulas.models.entityDTOs.AccountDTO;
 @NamedQueries({
 })
 
-public class Account extends Entity_  {
+public class Account extends Entity_<AccountDTO>  {
 	
 	private static final long serialVersionUID = 1L;
 

@@ -3,7 +3,7 @@ package javaGestaoAulas.models.entityDTOs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountDTO {
+public class AccountDTO extends EntityDTO {
 	
 	private long userId;
 	private List <Long>  academiesIds = new ArrayList<Long>();
